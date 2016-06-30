@@ -8,8 +8,12 @@ function run(config) {
   var creds;
   var chain = new AWS.CredentialProviderChain();
   chain.resolve(function (err, resolved) {
-      if (err) throw err;
-      else creds = resolved;
+      if (err) {
+        console.error("Could not load AWS Credentials");
+        process.exit(1);
+      } else {
+        creds = resolved;
+      }
   });
 
   // Automagically takes care for renewing credentials if needed
