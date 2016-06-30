@@ -36,7 +36,7 @@ function run(config) {
     var awsReq = new AWS.HttpRequest(awsEndpoint);
     awsReq.method = req.method;
     awsReq.path = req.path;
-    awsReq.region = 'eu-west-1';
+    awsReq.region = config.region;
     awsReq.headers['presigned-expires'] = false;
     awsReq.headers['Host'] = awsEndpoint.host;
 
