@@ -1,0 +1,20 @@
+{
+  "name": "amazon-elasticsearch-proxy",
+  "version": "0.0.1",
+  "description": "Sets up a local proxy that signs requests to Amazon Elasticsearch using IAM credentials",
+  "main": "cli.js",
+  "bin": {
+    "amazon-elasticsearch-proxy": "cli.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "commander": "^2.9.0",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
