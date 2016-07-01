@@ -56,6 +56,8 @@ function run(config) {
             respBody.push(chunk);
         });
         httpResp.on('end', function (chunk) {
+            res.statusCode = httpResp.statusCode;
+            res.statusMessage = httpResp.statusMessage;
             res.set(httpResp.headers);
             res.send(Buffer.concat(respBody));
         });
