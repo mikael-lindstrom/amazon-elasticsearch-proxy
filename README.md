@@ -4,7 +4,7 @@ Sets up a proxy for signing requests with IAM credentials to access Amazon Elast
 
 ### Installation
 ```
-npm install -g .
+npm install -g amazon-elasticsearch-proxy
 ```
 
 ### Usage
