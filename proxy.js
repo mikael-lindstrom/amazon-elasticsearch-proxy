@@ -26,7 +26,7 @@ function run(config) {
 
   // Setup express
   var app = express();
-  app.use(bodyParser.raw({type: '*/*'}));
+  app.use(bodyParser.raw({type: '*/*', limit: '1mb'}));
   app.use(getcreds);
 
   // Handle request
