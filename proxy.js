@@ -37,6 +37,11 @@ function run(config) {
     awsReq.method = req.method;
     awsReq.path = req.url;
     awsReq.region = config.region;
+
+    // Copy kbn-version header to avoid bad request
+    if (req.headers['kbn-version'])
+      awsReq.headers['kbn-version'] = req.headers['kbn-version'];
+
     awsReq.headers['presigned-expires'] = false;
     awsReq.headers['Host'] = awsEndpoint.host;
 
