@@ -68,7 +68,7 @@ function run(config) {
         });
       }, function(err) {
           console.error('Error: ' + err);
-          next(err, respBody);
+          res.sendStatus(503)
       });
   });
 
