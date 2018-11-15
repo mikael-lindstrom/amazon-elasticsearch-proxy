@@ -45,6 +45,9 @@ function run(config) {
     awsReq.headers['presigned-expires'] = false;
     awsReq.headers['Host'] = awsEndpoint.host;
 
+    if (req.headers['content-type'])
+        awsReq.headers['Content-Type'] = req.headers['content-type'];
+
     if (Buffer.isBuffer(req.body)) {
       awsReq.body = req.body;
     }
