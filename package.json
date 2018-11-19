@@ -1,6 +1,6 @@
 {
   "name": "amazon-elasticsearch-proxy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Sets up a local proxy that signs requests to Amazon Elasticsearch using IAM credentials",
   "preferGlobal": true,
   "main": "cli.js",
