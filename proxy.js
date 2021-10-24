@@ -42,6 +42,9 @@ function run(config) {
     if (req.headers['kbn-version'])
       awsReq.headers['kbn-version'] = req.headers['kbn-version'];
 
+    // Add the required kbn-xsrf header 
+    awsReq.headers['kbn-xsrf'] = true
+
     awsReq.headers['presigned-expires'] = false;
     awsReq.headers['Host'] = awsEndpoint.host;
 
